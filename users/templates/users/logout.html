@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="content-section">
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Logout</legend>
+                <h4>¿Estás seguro que querés cerrar sesión?</h4>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Cerrar sesión</button>
+            </div>
+        </form>
+
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                ¿Ya cerraste sesión? <a href="{% url 'login' %}">Volver a iniciar sesión</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
