@@ -1,0 +1,27 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# Django SQLite database
+db.sqlite3
+
+# Django media files
+media/
+
+# Django log files
+*.log
+
+# Environment variables
+.env
+
+# IDE settings (example for Visual Studio Code)
+.vscode/
+
+# MacOS and Windows specific files
+.DS_Store
+Thumbs.db
